@@ -39,7 +39,6 @@ public class UserController {
 
 	@GetMapping("/users")
 	List<User> getAll(@RequestParam HashMap<String,String> args) {
-		
 		return userService.getAllUser(args);
 	}
 	
