@@ -31,8 +31,8 @@ public class UserService {
 		}else {
 			
 			if(args.containsKey("sort_field")) {
-				
-				if(args.get("sort_order_mode") == "asc") {
+				System.out.print("Order mode"+ args.get("sort_order_mode") + "\n \n");
+				if(args.get("sort_order_mode").equals("asc")) {
 					users = (List<User>) userRepository.findAll(Sort.by(args.get("sort_field")).ascending());
 				} else {
 					users = (List<User>) userRepository.findAll(Sort.by(args.get("sort_field")).descending());
